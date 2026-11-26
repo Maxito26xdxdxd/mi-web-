@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxito26 - Página oficial</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #10131c;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Fondo animado */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            opacity: 0.22;
+            animation: moveToCorner linear infinite;
+        }
+
+        .floating-image:nth-child(1) {
+            top: -120px;
+            left: 5%;
+            animation-duration: 17s;
+        }
+
+        .floating-image:nth-child(2) {
+            top: -120px;
+            left: 25%;
+            animation-duration: 22s;
+            animation-delay: 2s;
+        }
+
+        .floating-image:nth-child(3) {
+            top: -120px;
+            left: 45%;
+            animation-duration: 19s;
+            animation-delay: 4s;
+        }
+
+        .floating-image:nth-child(4) {
+            top: -120px;
+            left: 65%;
+            animation-duration: 24s;
+            animation-delay: 1s;
+        }
+
+        .floating-image:nth-child(5) {
+            top: -120px;
+            left: 85%;
+            animation-duration: 20s;
+            animation-delay: 6s;
+        }
+
+        @keyframes moveToCorner {
+            from {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            to {
+                transform: translate(20vw, 120vh) rotate(360deg);
+            }
+        }
+
+        /* Contenido principal */
+
+        main {
+            position: relative;
+            z-index: 1;
+            width: min(700px, 90%);
+            margin: 70px auto;
+            padding: 35px;
+            text-align: center;
+            background: rgba(24, 29, 43, 0.94);
+            border: 1px solid #343b50;
+            border-radius: 18px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #657cff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #b9bfd0;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Enlaces */
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 35px;
+        }
+
+        .link-button {
+            display: block;
+            padding: 15px;
+            border-radius: 10px;
+            background: #303a59;
+            color: white;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .link-button:hover {
+            background: #465783;
+            transform: scale(1.03);
+        }
+
+        /* Botón inútil */
+
+        .useless-section {
+            border-top: 1px solid #41485c;
+            padding-top: 25px;
+        }
+
+        .useless-section h2 {
+            margin-bottom: 15px;
+        }
+
+        #uselessButton {
+            background: #a33d50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 9px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: transform 0.12s ease, background 0.2s;
+        }
+
+        #uselessButton:hover {
+            background: #c14c62;
+            transform: scale(1.05);
+        }
+
+        #uselessButton:active {
+            transform: scale(0.90);
+        }
+
+        #clickMessage {
+            margin-top: 20px;
+            line-height: 1.7;
+            min-height: 30px;
+        }
+
+        .special-message {
+            color: #83e5a5;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #788198;
+            font-size: 12px;
+        }
+
+        @media (max-width: 500px) {
+            main {
+                padding: 25px 18px;
+                margin: 35px auto;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .floating-image {
+                width: 75px;
+                height: 75px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .floating-image {
+                animation: none;
+            }
+
+            .link-button,
+            #uselessButton {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cinco imagenes del fondo -->
+    <div class="background">
+        <img class="floating-image" src="fondo1.png" alt="">
+        <img class="floating-image" src="fondo2.png" alt="">
+        <img class="floating-image" src="fondo3.png" alt="">
+        <img class="floating-image" src="fondo4.png" alt="">
+        <img class="floating-image" src="fondo5.png" alt="">
+    </div>
+
+    <main>
+
+        <!-- Foto de perfil -->
+        <img
+            class="profile-picture"
+            src="Maxito26.png"
+            alt="Foto de perfil de Maxito26"
+        >
+
+        <h1>Maxito26</h1>
+
+        <p class="description">
+            Bienvenido a mi pagina personal.
+            Este es mi pequeño espacio en Internet.
+        </p>
+
+        <!-- Enlaces -->
+        <div class="links">
+
+            <a
+                class="link-button"
+                href="https://www.youtube.com/@maxito26_XD_MC"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Mi canal de YouTube
+            </a>
+
+            <a
+                class="link-button"
+                href="https://mods.sm64coopdx.com/members/maxito26xdxdxd.81143/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Mi perfil de Coop Deluxe
+            </a>
+
+        </div>
+
+        <!-- Boton inutil -->
+        <section class="useless-section">
+
+            <h2>¿Quieres probar algo inutil?</h2>
+
+            <button id="uselessButton" type="button">
+                Boton inutil
+            </button>
+
+            <div id="clickMessage" aria-live="polite"></div>
+
+        </section>
+
+        <footer>
+            Maxito26 - Pagina personal
+        </footer>
+
+    </main>
+
+    <script>
+        const button = document.getElementById("uselessButton");
+        const message = document.getElementById("clickMessage");
+
+        let clicks = 0;
+
+        button.addEventListener("click", function () {
+
+            if (clicks >= 30) {
+                return;
+            }
+
+            clicks++;
+
+            if (clicks === 1) {
+                message.textContent =
+                    "ves bro te dije que este boton es inutil";
+            }
+
+            if (clicks === 10) {
+                message.textContent = "";
+            }
+
+            if (clicks === 30) {
+                message.textContent =
+                    "Felicidades por precionar 30 veces, te ganaste una coca cola y unas galletas :)";
+
+                message.classList.add("special-message");
+            }
+
+        });
+    </script>
+
+</body>
+</html>
